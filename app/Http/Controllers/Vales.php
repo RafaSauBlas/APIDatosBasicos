@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
 use App\Models\FATB_DistibuidorVales;
 use Illuminate\Support\Facades\DB;
