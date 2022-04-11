@@ -14,12 +14,12 @@ class Profes extends Migration
     public function up()
     {
         Schema::create('Maestros', function (Blueprint $table){
-            $table->id();
-            $table->string('nombre');
-            $table->string('appaterno');
-            $table->string('apmaterno');
-            $table->string('correo');
-      });
+              $table->id();
+              $table->string('nombre');
+              $table->string('appaterno');
+              $table->string('apmaterno');
+              $table->string('correo');
+        });
     }
 
     /**

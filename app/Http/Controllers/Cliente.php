@@ -52,19 +52,19 @@ class Cliente extends Controller
         $Cliente = DB::table('FATB_Clientes')->where('FAnv_CveCliente', $request->FAnv_CveCliente)
         ->update([
             'FAnv_FiscalColonia' => strtoupper($request->FAnv_FiscalColonia),
+            'FAnv_Municipio' => strtoupper($request->FAnv_Municipio),
+            'FAnv_APaterno' => strtoupper($request->FAnv_APaterno),
+            'FAnv_AMaterno' => strtoupper($request->FAnv_AMaterno),
             'FAin_FiscalCP' => strtoupper($request->FAin_FiscalCP),
+            'FAnv_Estado' => strtoupper($request->FAnv_Estado),
+            'FAnv_Email' => strtoupper($request->FAnv_Email),
             'FAnv_Calle' => strtoupper($request->FAnv_Calle),
+            'FAnv_Razon' => strtoupper($request->FAnv_Razon),
+            'FAnv_Sexo' => strtoupper($request->FAnv_Sexo),
+            'FAnv_CURP' => strtoupper($request->FAnv_CURP),
             'FAnv_Tel' => strtoupper($request->FAnv_Tel),
             'FAnv_Cel' => strtoupper($request->FAnv_Cel),
             'FAnv_RFC' => strtoupper($request->FAnv_RFC),
-            'FAnv_CURP' => strtoupper($request->FAnv_CURP),
-            'FAnv_Email' => strtoupper($request->FAnv_Email),
-            'FAnv_Municipio' => strtoupper($request->FAnv_Municipio),
-            'FAnv_Estado' => strtoupper($request->FAnv_Estado),
-            'FAnv_APaterno' => strtoupper($request->FAnv_APaterno),
-            'FAnv_AMaterno' => strtoupper($request->FAnv_AMaterno),
-            'FAnv_Razon' => strtoupper($request->FAnv_Razon),
-            'FAnv_Sexo' => strtoupper($request->FAnv_Sexo),
             'FAnv_IFE' => strtoupper($request->FAnv_IFE)
         ]);
         return response ("Los datos del cliente se han modificado correctamente.", 200);

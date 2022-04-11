@@ -12,9 +12,10 @@ class Distribuidor extends Controller
     public function SHOW(Request $request){
         $distrib = DB::table('FATB_Distibuidor')->where('FAin_Id', $request->distrib)
                      ->join('FATB_DistibuidorEstatus', 'FATB_DistibuidorEstatus.FAnv_Id', '=', 'FATB_Distibuidor.FAnv_Estatus')
-                     ->select('FATB_Distibuidor.FAin_Id as Id', 'FATB_Distibuidor.FAnv_NombreCompleto as Nombre', 'FATB_DistibuidorEstatus.FAnv_Descrip as Estatus',
-                              'FATB_Distibuidor.FAnv_TelCel as Celular', 'FATB_Distibuidor.FAdc_LineaCredito as Saldo',
-                              'FATB_Distibuidor.FAdc_MontoCred as Limite', 'FATB_Distibuidor.FAbt_AceptaElectronica as Electronica')
+                     ->select('FATB_Distibuidor.FAin_Id As Id', 'FATB_Distibuidor.FAnv_NombreCompleto As Nombre', 
+                              'FATB_DistibuidorEstatus.FAnv_Descrip As Estatus', 'FATB_Distibuidor.FAnv_TelCel As Celular',
+                              'FATB_Distibuidor.FAdc_LineaCredito As Saldo', 'FATB_Distibuidor.FAdc_MontoCred As Limite',
+                              'FATB_Distibuidor.FAbt_AceptaElectronica As Electronica')
                      ->get();
         return $distrib;
     }
